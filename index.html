@@ -4482,7 +4482,25 @@ window.CET6_STANDALONE = true;
       const script = document.createElement("script");
       script.src = "audio-data.js";
       script.async = true;
-      script.onload = () => resolve(Boolean(window.CET6_AUDIO));
+      script.onload = async () => {
+        if (window.CET6_AUDIO) {
+          resolve(true);
+          return;
+        }
+        try {
+          if (!window.CET6_AUDIO_GZIP || typeof DecompressionStream !== "function") {
+            resolve(false);
+            return;
+          }
+          const compressed = Uint8Array.from(atob(window.CET6_AUDIO_GZIP), (char) => char.charCodeAt(0));
+          const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream("gzip"));
+          window.CET6_AUDIO = JSON.parse(await new Response(stream).text());
+          resolve(true);
+        } catch (error) {
+          console.warn("Unable to decode bundled listening audio.", error);
+          resolve(false);
+        }
+      };
       script.onerror = () => resolve(false);
       document.head.appendChild(script);
     });
@@ -4510,7 +4528,10 @@ window.CET6_STANDALONE = true;
     record.started = true;
     record.lastSegment = index;
 
+    $("#audio-position").textContent = "正在加载听力音频…";
+    $("#play-toggle").disabled = true;
     await loadAudioData();
+    $("#play-toggle").disabled = false;
     if (run !== app.audio.run) return;
     const audioKey = `${lesson.id}-${index}`;
     const audioSource = window.CET6_AUDIO?.[audioKey] || encodeURI(`audio/${lesson.id}-${index}.wav`);
