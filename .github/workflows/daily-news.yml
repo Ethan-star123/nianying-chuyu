@@ -1,1 +1,46 @@
-daily-news.yml
+name: Daily CET-6 news listening
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-cet6-news
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install speech tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng
+          python -m pip install --upgrade pip edge-tts
+
+      - name: Generate verified current-affairs lesson
+        run: python scripts/daily_update.py
+
+      - name: Commit daily content
+        run: |
+          git config user.name "Nianying Chuyu Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add daily-content.json daily-audio scripts/news-state.json
+          if git diff --cached --quiet; then
+            echo "No new lesson to publish."
+          else
+            git commit -m "Update daily news listening"
+            git push
+          fi
