@@ -1,0 +1,85 @@
+{
+  "id": "daily-20261029",
+  "date": "2026-10-29",
+  "code": "NEWS",
+  "section": "今日时政",
+  "title": "Daily News: Israel election results live: Netanyahu bloc and main opposition set to fall short of majority as 92% of ballots counted",
+  "subtitle": "The Guardian World · 2026-10-28 · 原创导听与理解题",
+  "description": "基于可信新闻源公开标题与摘要制作的原创六级听力练习，不转载原文全文。",
+  "level": "CET-6 · 新闻精听",
+  "duration": "01:07",
+  "speakerNames": [
+    "Anchor",
+    "Analyst"
+  ],
+  "source": {
+    "name": "The Guardian World",
+    "url": "https://www.theguardian.com/world/live/2026/oct/28/israel-election-results-live-updates-exit-polls-netanyahu-likud-eisenkot-latest-news",
+    "publishedAt": "2026-10-28",
+    "headline": "Israel election results live: Netanyahu bloc and main opposition set to fall short of majority as 92% of ballots counted"
+  },
+  "transcript": [
+    {
+      "speaker": 0,
+      "seconds": 11,
+      "text": "A report from The Guardian World, published on 2026-10-28, is drawing attention to a major international development. The headline is: Israel election results live: Netanyahu bloc and main opposition set to fall short of majority as 92% of ballots counted.",
+      "audio": "daily-audio/0.mp3"
+    },
+    {
+      "speaker": 1,
+      "seconds": 14,
+      "text": "The published summary explains the central development this way: \"Opposition bloc and Netanyahu’s coalition predicted to fall short of 61 seats needed to form a government, while Palestinian parties set for big gains Full report: Coalition talks loom in Israel Analysis: Rise of Palestinian parties will redraw political landscape Israel election: what we know so far One.\"",
+      "audio": "daily-audio/1.mp3"
+    },
+    {
+      "speaker": 0,
+      "seconds": 13,
+      "text": "The update raises wider questions about how institutions respond, what the change may mean for the public, and which details can be independently confirmed.",
+      "audio": "daily-audio/2.mp3"
+    },
+    {
+      "speaker": 1,
+      "seconds": 12,
+      "text": "When you listen, separate the confirmed information in the report from the broader context. Use the original source to check names, numbers, and later developments.",
+      "audio": "daily-audio/3.mp3"
+    },
+    {
+      "speaker": 0,
+      "seconds": 10,
+      "text": "You can revisit the full report through the source link shown with this lesson.",
+      "audio": "daily-audio/4.mp3"
+    }
+  ],
+  "questions": [
+    {
+      "id": "daily-topic",
+      "prompt": "What is the central news development discussed in the report?",
+      "options": [
+        "Trump says government to ‘terminate’ Biden-era methane emissions rules",
+        "Israel election: what we know so far",
+        "Israel election results live: Netanyahu bloc and main opposition set to fall short of majority as 92% of ballots counted"
+      ],
+      "answer": 2,
+      "explanation": "节目开头明确介绍了这则新闻：Israel election results live: Netanyahu bloc and main opposition set to fall short of majority as 92% of ballots counted。",
+      "skill": "新闻主旨"
+    },
+    {
+      "id": "daily-source",
+      "prompt": "Which organization published the report discussed in the dialogue?",
+      "options": [
+        "The Guardian World",
+        "BBC World",
+        "NPR World"
+      ],
+      "answer": 0,
+      "explanation": "材料中的新闻来源标注为 The Guardian World，发布日期为 2026-10-28。",
+      "skill": "来源辨认"
+    }
+  ],
+  "vocabulary": [
+    "coherent",
+    "constraint",
+    "anticipate",
+    "incentive"
+  ]
+}
