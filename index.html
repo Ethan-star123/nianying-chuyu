@@ -617,6 +617,17 @@ a {
   font-size: 12px;
 }
 
+.lesson-source {
+  margin: 8px 0 0;
+  color: var(--ink-secondary);
+  font-size: 12px;
+}
+
+.lesson-source a {
+  color: var(--accent-dark);
+  text-underline-offset: 3px;
+}
+
 .audio-deck {
   display: grid;
   grid-template-columns: 52px minmax(150px, 1fr) auto auto;
@@ -2764,6 +2775,7 @@ a {
             </div>
             <h2 id="current-lesson-title">The Quiet Library Project</h2>
             <p class="lesson-subtitle" id="current-lesson-subtitle"></p>
+            <p class="lesson-source" id="current-lesson-source" hidden></p>
 
             <div class="audio-deck">
               <button class="play-button" id="play-toggle" type="button" aria-label="播放听力">
@@ -3749,6 +3761,14 @@ window.CET6_STANDALONE = true;
     $("#current-lesson-title").textContent = lesson.title;
     $("#current-lesson-subtitle").textContent = lesson.subtitle;
     $("#audio-duration").textContent = `预计 ${lesson.duration}`;
+    const source = $("#current-lesson-source");
+    if (lesson.source?.name && lesson.source?.url) {
+      source.hidden = false;
+      source.innerHTML = `新闻日期 ${escapeHtml(lesson.source.publishedAt || "")} · 来源 <a href="${escapeHtml(lesson.source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(lesson.source.name)}</a>`;
+    } else {
+      source.hidden = true;
+      source.textContent = "";
+    }
   }
 
   function renderWaveform() {
@@ -4527,13 +4547,16 @@ window.CET6_STANDALONE = true;
     record.started = true;
     record.lastSegment = index;
 
-    $("#audio-position").textContent = "正在加载听力音频…";
-    $("#play-toggle").disabled = true;
-    await loadAudioData(lesson.id);
-    $("#play-toggle").disabled = false;
+    const line = lesson.transcript[index];
+    if (!line.audio) {
+      $("#audio-position").textContent = "正在加载听力音频…";
+      $("#play-toggle").disabled = true;
+      await loadAudioData(lesson.id);
+      $("#play-toggle").disabled = false;
+    }
     if (run !== app.audio.run) return;
     const audioKey = `${lesson.id}-${index}`;
-    const audioSource = window.CET6_AUDIO?.[audioKey] || encodeURI(`audio/${lesson.id}-${index}.wav`);
+    const audioSource = window.CET6_AUDIO?.[audioKey] || line.audio || encodeURI(`audio/${lesson.id}-${index}.wav`);
     const audio = new Audio(audioSource);
     app.audio.element = audio;
     audio.preload = "auto";
@@ -4878,8 +4901,37 @@ window.CET6_STANDALONE = true;
     }
   }
 
-  function init() {
+  async function loadDailyContent() {
+    try {
+      const response = await fetch(`daily-content.json?date=${todayKey()}`, { cache: "no-store" });
+      if (!response.ok) return;
+      const daily = await response.json();
+      if (!daily || daily.date !== todayKey() || !Array.isArray(daily.transcript) || !Array.isArray(daily.questions)) return;
+      const normalized = {
+        ...daily,
+        id: daily.id || `daily-${daily.date}`,
+        code: daily.code || "NEWS",
+        section: daily.section || "今日时政",
+        level: daily.level || "CET-6 · 新闻精听",
+        duration: daily.duration || "02:00",
+        speakerNames: daily.speakerNames || ["Anchor", "Analyst"],
+        vocabulary: Array.isArray(daily.vocabulary) ? daily.vocabulary : [],
+        isDaily: true
+      };
+      window.CET6_DAILY = normalized;
+      DATA.lessons = [normalized, ...DATA.lessons.filter((lesson) => lesson.id !== normalized.id)];
+    } catch (error) {
+      console.warn("Daily listening is unavailable; using built-in lessons.", error);
+    }
+  }
+
+  async function init() {
+    await loadDailyContent();
     app.state = loadState();
+    if (window.CET6_DAILY && app.state.ui.lastDailyId !== window.CET6_DAILY.id) {
+      app.state.currentLessonId = window.CET6_DAILY.id;
+      app.state.ui.lastDailyId = window.CET6_DAILY.id;
+    }
     app.view = app.state.ui.view || "dashboard";
     app.audio.segment = lessonState().lastSegment;
     bindEvents();
