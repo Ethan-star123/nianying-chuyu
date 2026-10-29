@@ -1,10 +1,10 @@
 {
-  "id": "daily-20261029",
-  "date": "2026-10-29",
+  "id": "daily-20261030",
+  "date": "2026-10-30",
   "code": "NEWS",
   "section": "今日时政",
-  "title": "Daily News: Australian politics live: PM says Coalition’s fair trade credentials will be ‘shredded’ if EU deal support withheld",
-  "subtitle": "The Guardian World · 2026-10-29 · 原创导听与理解题",
+  "title": "Daily News: JD Vance letter may offer last chance to avert fresh conflict between US and Iran",
+  "subtitle": "The Guardian World · 2026-10-30 · 原创导听与理解题",
   "description": "基于可信新闻源公开标题与摘要制作的原创六级听力练习，不转载原文全文。",
   "level": "CET-6 · 新闻精听",
   "duration": "01:05",
@@ -14,21 +14,21 @@
   ],
   "source": {
     "name": "The Guardian World",
-    "url": "https://www.theguardian.com/australia-news/live/2026/oct/29/labor-treasurer-jim-chalmers-social-media-anthony-albanese-coalition-one-nation-ntwnfb",
-    "publishedAt": "2026-10-29",
-    "headline": "Australian politics live: PM says Coalition’s fair trade credentials will be ‘shredded’ if EU deal support withheld"
+    "url": "https://www.theguardian.com/world/2026/oct/29/jd-vance-letter-may-offer-last-chance-to-avert-fresh-conflict-between-us-and-iran",
+    "publishedAt": "2026-10-30",
+    "headline": "JD Vance letter may offer last chance to avert fresh conflict between US and Iran"
   },
   "transcript": [
     {
       "speaker": 0,
       "seconds": 11,
-      "text": "A report from The Guardian World, published on 2026-10-29, is drawing attention to a major international development. The headline is: Australian politics live: PM says Coalition’s fair trade credentials will be ‘shredded’ if EU deal support withheld.",
+      "text": "A report from The Guardian World, published on 2026-10-30, is drawing attention to a major international development. The headline is: JD Vance letter may offer last chance to avert fresh conflict between US and Iran.",
       "audio": "daily-audio/0.mp3"
     },
     {
       "speaker": 1,
       "seconds": 14,
-      "text": "The published summary explains the central development this way: \"Follow the day’s news live Get our breaking news email , free app or daily news podcast Gas reservation policy set for lower house vote today Australia’s domestic gas reservation is set to be debated and voted on in the lower house today. Rather than international base companies.\"",
+      "text": "The published summary explains the central development this way: \"US vice-president writes to top Iranian security official in sign Washington has not abandoned diplomacy Hopes of averting a major new conflagration between Iran and the US soon after Tuesday’s midterm elections could rest on Iran’s response to a personal letter from the US vice-president, JD Vance, offering.\"",
       "audio": "daily-audio/1.mp3"
     },
     {
@@ -55,31 +55,31 @@
       "id": "daily-topic",
       "prompt": "What is the central news development discussed in the report?",
       "options": [
-        "Australian politics live: PM says Coalition’s fair trade credentials will be ‘shredded’ if EU deal support withheld",
-        "Flávio Bolsonaro calls himself the ‘leader of Brazil’ after fleeing to Miami",
-        "Death toll rises to 68 with dozens injured after high-speed train collision in Spain – as it happened"
+        "Israeli leader Netanyahu accused of using ‘ugly’ smear tactics to cling to power",
+        "JD Vance letter may offer last chance to avert fresh conflict between US and Iran",
+        "Brazil’s victory for the planet and democracy: seven lessons from Lula’s win"
       ],
-      "answer": 0,
-      "explanation": "节目开头明确介绍了这则新闻：Australian politics live: PM says Coalition’s fair trade credentials will be ‘shredded’ if EU deal support withheld。",
+      "answer": 1,
+      "explanation": "节目开头明确介绍了这则新闻：JD Vance letter may offer last chance to avert fresh conflict between US and Iran。",
       "skill": "新闻主旨"
     },
     {
       "id": "daily-source",
       "prompt": "Which organization published the report discussed in the dialogue?",
       "options": [
+        "The Guardian World",
         "UN News",
-        "BBC World",
-        "The Guardian World"
+        "BBC World"
       ],
-      "answer": 2,
-      "explanation": "材料中的新闻来源标注为 The Guardian World，发布日期为 2026-10-29。",
+      "answer": 0,
+      "explanation": "材料中的新闻来源标注为 The Guardian World，发布日期为 2026-10-30。",
       "skill": "来源辨认"
     }
   ],
   "vocabulary": [
+    "vulnerability",
+    "mitigate",
     "resilient",
-    "consensus",
-    "preliminary",
-    "adequate"
+    "consensus"
   ]
 }
