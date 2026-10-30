@@ -1,34 +1,34 @@
 {
-  "id": "daily-20261030",
-  "date": "2026-10-30",
+  "id": "daily-20261031",
+  "date": "2026-10-31",
   "code": "NEWS",
   "section": "今日时政",
-  "title": "Daily News: JD Vance letter may offer last chance to avert fresh conflict between US and Iran",
+  "title": "Daily News: Netanyahu accused of smearing Arab voters to hold on to power",
   "subtitle": "The Guardian World · 2026-10-30 · 原创导听与理解题",
   "description": "基于可信新闻源公开标题与摘要制作的原创六级听力练习，不转载原文全文。",
   "level": "CET-6 · 新闻精听",
-  "duration": "01:05",
+  "duration": "01:03",
   "speakerNames": [
     "Anchor",
     "Analyst"
   ],
   "source": {
     "name": "The Guardian World",
-    "url": "https://www.theguardian.com/world/2026/oct/29/jd-vance-letter-may-offer-last-chance-to-avert-fresh-conflict-between-us-and-iran",
+    "url": "https://www.theguardian.com/world/2026/oct/29/israeli-leader-netanyahu-accused-of-using-ugly-smear-tactics-to-cling-to-power",
     "publishedAt": "2026-10-30",
-    "headline": "JD Vance letter may offer last chance to avert fresh conflict between US and Iran"
+    "headline": "Netanyahu accused of smearing Arab voters to hold on to power"
   },
   "transcript": [
     {
       "speaker": 0,
       "seconds": 11,
-      "text": "A report from The Guardian World, published on 2026-10-30, is drawing attention to a major international development. The headline is: JD Vance letter may offer last chance to avert fresh conflict between US and Iran.",
+      "text": "A report from The Guardian World, published on 2026-10-30, is drawing attention to a major international development. The headline is: Netanyahu accused of smearing Arab voters to hold on to power.",
       "audio": "daily-audio/0.mp3"
     },
     {
       "speaker": 1,
       "seconds": 14,
-      "text": "The published summary explains the central development this way: \"US vice-president writes to top Iranian security official in sign Washington has not abandoned diplomacy Hopes of averting a major new conflagration between Iran and the US soon after Tuesday’s midterm elections could rest on Iran’s response to a personal letter from the US vice-president, JD Vance, offering.\"",
+      "text": "The published summary explains the central development this way: \"Prime minister claims Arab Israeli parties used foreign backing to steal elections, in which his coalition lost its majority Benjamin Netanyahu has been accused of using smear tactics to cling to power, after he claimed that Arab Israeli parties had used foreign backing to “steal” Tuesday’s election, in.\"",
       "audio": "daily-audio/1.mp3"
     },
     {
@@ -55,31 +55,31 @@
       "id": "daily-topic",
       "prompt": "What is the central news development discussed in the report?",
       "options": [
-        "Israeli leader Netanyahu accused of using ‘ugly’ smear tactics to cling to power",
-        "JD Vance letter may offer last chance to avert fresh conflict between US and Iran",
+        "Netanyahu accused of smearing Arab voters to hold on to power",
+        "El Niño-driven drought in Papua New Guinea a ‘national crisis’ as rivers dry up and local farms fail",
         "Brazil’s victory for the planet and democracy: seven lessons from Lula’s win"
       ],
-      "answer": 1,
-      "explanation": "节目开头明确介绍了这则新闻：JD Vance letter may offer last chance to avert fresh conflict between US and Iran。",
+      "answer": 0,
+      "explanation": "节目开头明确介绍了这则新闻：Netanyahu accused of smearing Arab voters to hold on to power。",
       "skill": "新闻主旨"
     },
     {
       "id": "daily-source",
       "prompt": "Which organization published the report discussed in the dialogue?",
       "options": [
+        "BBC World",
         "The Guardian World",
-        "UN News",
-        "BBC World"
+        "NPR World"
       ],
-      "answer": 0,
+      "answer": 1,
       "explanation": "材料中的新闻来源标注为 The Guardian World，发布日期为 2026-10-30。",
       "skill": "来源辨认"
     }
   ],
   "vocabulary": [
+    "incentive",
     "vulnerability",
     "mitigate",
-    "resilient",
-    "consensus"
+    "resilient"
   ]
 }
