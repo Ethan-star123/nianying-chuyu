@@ -1,34 +1,34 @@
 {
-  "id": "daily-20261101",
-  "date": "2026-11-01",
+  "id": "daily-20261102",
+  "date": "2026-11-02",
   "code": "NEWS",
   "section": "今日时政",
-  "title": "Daily News: A new political era in the Southern Philippines",
-  "subtitle": "NPR World · 2026-11-01 · 原创导听与理解题",
+  "title": "Daily News: Attempted murder probe after petrol bomb thrown at French riot police",
+  "subtitle": "The Guardian World · 2026-11-02 · 原创导听与理解题",
   "description": "基于可信新闻源公开标题与摘要制作的原创六级听力练习，不转载原文全文。",
   "level": "CET-6 · 新闻精听",
-  "duration": "00:55",
+  "duration": "01:03",
   "speakerNames": [
     "Anchor",
     "Analyst"
   ],
   "source": {
-    "name": "NPR World",
-    "url": "https://www.npr.org/2026/10/31/nx-s1-6020639/a-new-political-era-in-the-southern-philippines",
-    "publishedAt": "2026-11-01",
-    "headline": "A new political era in the Southern Philippines"
+    "name": "The Guardian World",
+    "url": "https://www.theguardian.com/world/2026/nov/01/petrol-bomb-thrown-at-french-riot-police",
+    "publishedAt": "2026-11-02",
+    "headline": "Attempted murder probe after petrol bomb thrown at French riot police"
   },
   "transcript": [
     {
       "speaker": 0,
       "seconds": 11,
-      "text": "A report from NPR World, published on 2026-11-01, is drawing attention to a major international development. The headline is: A new political era in the Southern Philippines.",
+      "text": "A report from The Guardian World, published on 2026-11-02, is drawing attention to a major international development. The headline is: Attempted murder probe after petrol bomb thrown at French riot police.",
       "audio": "daily-audio/0.mp3"
     },
     {
       "speaker": 1,
       "seconds": 14,
-      "text": "The published summary explains the central development this way: \"A new local government has taken its seat in the southern Philippines, in a step that marks a milestone in the peace process for a conflict that has lasted some 80 years.\"",
+      "text": "The published summary explains the central development this way: \"Youth-led protests end with street violence in cities across France, Germany, Switzerland, Portugal and Albania French officials have opened an investigation into the attempted murder of a police officer and Germany’s interior minister has called for harsh penalties after peaceful and mainly youth-led protests across Europe ended in.\"",
       "audio": "daily-audio/1.mp3"
     },
     {
@@ -55,24 +55,24 @@
       "id": "daily-topic",
       "prompt": "What is the central news development discussed in the report?",
       "options": [
-        "Trump beware: US voters are concerned about government corruption",
-        "A new political era in the Southern Philippines",
-        "DR Congo: Hunger deepens for millions amid conflict, Ebola and climate shocks"
+        "Judge dismisses Trump attempt to block Alaska Senate race results if Republican loses",
+        "The US-China trade war seems to have subsided – but the sense of calm is misleading",
+        "Attempted murder probe after petrol bomb thrown at French riot police"
       ],
-      "answer": 1,
-      "explanation": "节目开头明确介绍了这则新闻：A new political era in the Southern Philippines。",
+      "answer": 2,
+      "explanation": "节目开头明确介绍了这则新闻：Attempted murder probe after petrol bomb thrown at French riot police。",
       "skill": "新闻主旨"
     },
     {
       "id": "daily-source",
       "prompt": "Which organization published the report discussed in the dialogue?",
       "options": [
-        "The Guardian World",
+        "BBC World",
         "NPR World",
-        "UN News"
+        "The Guardian World"
       ],
-      "answer": 1,
-      "explanation": "材料中的新闻来源标注为 NPR World，发布日期为 2026-11-01。",
+      "answer": 2,
+      "explanation": "材料中的新闻来源标注为 The Guardian World，发布日期为 2026-11-02。",
       "skill": "来源辨认"
     }
   ],
