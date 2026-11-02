@@ -11,7 +11,6 @@ import re
 import shutil
 import subprocess
 import sys
-import tempfile
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
@@ -26,7 +25,9 @@ CONTENT_PATH = ROOT / "daily-content.json"
 AUDIO_DIR = ROOT / "daily-audio"
 FEEDS = [
     ("BBC World", "https://feeds.bbci.co.uk/news/world/rss.xml"),
+    ("BBC Science & Environment", "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml"),
     ("The Guardian World", "https://www.theguardian.com/world/rss"),
+    ("The Guardian Environment", "https://www.theguardian.com/environment/rss"),
     ("UN News", "https://news.un.org/feed/subscribe/en/news/all/rss.xml"),
     ("NPR World", "https://feeds.npr.org/1004/rss.xml"),
     ("DW World", "https://rss.dw.com/rdf/rss-en-world"),
@@ -36,6 +37,11 @@ TOPIC_WORDS = (
     "conflict", "peace", "trade", "health", "technology", "policy", "court",
     "parliament", "security", "diplomatic", "international", "crisis",
 )
+BLOCKED_WORDS = {
+    "murder", "killed", "killing", "dead", "death", "shooting", "gun",
+    "bomb", "blast", "attack", "war", "riot", "abuse", "assault",
+    "crash", "suicide", "hostage", "terror", "injury", "wounded",
+}
 VOCABULARY_IDS = [
     "mitigate", "resilient", "consensus", "preliminary", "adequate",
     "coherent", "constraint", "anticipate", "incentive", "vulnerability",
@@ -138,7 +144,9 @@ def item_score(item: dict, now: datetime) -> float:
     age_hours = max(0.0, (now - item["published"]).total_seconds() / 3600)
     title_text = f"{item['title']} {item['summary']}".lower()
     relevance = sum(2 for word in TOPIC_WORDS if word in title_text)
-    return relevance - age_hours / 18
+    approachable = 3 if "Science" in item["source"] or "Environment" in item["source"] else 0
+    brevity = max(0, 24 - len(item["title"].split())) / 5
+    return relevance + approachable + brevity - age_hours / 18
 
 
 def load_state() -> dict:
@@ -174,6 +182,21 @@ def choose_news() -> tuple[dict, list[dict]] | None:
         if now - timedelta(hours=72) <= item["published"] <= now + timedelta(minutes=20)
         and item["url"] not in used
     ]
+    preferred = [
+        item for item in recent
+        if len(item["title"].split()) <= 20
+        and 8 <= len(item["summary"].split()) <= 58
+        and not any(
+            marker in f"{item['title']} {item['url']}".lower()
+            for marker in ("live", "latest", "as it happened", "opinion", "analysis")
+        )
+        and not any(
+            re.search(rf"\b{re.escape(word)}\b", f"{item['title']} {item['summary']}".lower())
+            for word in BLOCKED_WORDS
+        )
+    ]
+    if preferred:
+        recent = preferred
     if not recent:
         return None
     recent.sort(key=lambda item: item_score(item, now), reverse=True)
@@ -185,34 +208,39 @@ def build_lesson(item: dict, alternatives: list[dict]) -> dict:
     local_date = datetime.now(shanghai).date().isoformat()
     published_date = item["published"].astimezone(shanghai).date().isoformat()
     summary_words = item["summary"].split()
-    short_summary = " ".join(summary_words[:48]).rstrip(".,;:") + "."
-    headline = item["title"].rstrip(".")
+    short_summary = " ".join(summary_words[:30]).rstrip(".,;:") + "."
+    headline = " ".join(item["title"].split()[:22]).rstrip(".")
 
     transcript = [
         {
             "speaker": 0,
-            "seconds": 11,
-            "text": f"A report from {item['source']}, published on {published_date}, is drawing attention to a major international development. The headline is: {headline}.",
+            "seconds": 8,
+            "text": f"Today, we look at a news story from {item['source']}. It was published on {published_date}.",
+            "translationZh": f"今天的新闻来自 {item['source']}，发布时间是 {published_date}。",
         },
         {
             "speaker": 1,
-            "seconds": 14,
-            "text": f"The published summary explains the central development this way: \"{short_summary}\"",
+            "seconds": 9,
+            "text": f"The main story is this: {headline}.",
+            "translationZh": "这条新闻正在报道一项新的国际动态。先抓住英文标题中的国家、机构和事件关键词。",
         },
         {
             "speaker": 0,
-            "seconds": 13,
-            "text": "The update raises wider questions about how institutions respond, what the change may mean for the public, and which details can be independently confirmed.",
-        },
-        {
-            "speaker": 1,
             "seconds": 12,
-            "text": "When you listen, separate the confirmed information in the report from the broader context. Use the original source to check names, numbers, and later developments.",
+            "text": f"The report says: \"{short_summary}\"",
+            "translationZh": "英文摘要介绍了新闻的核心事实；这里只引用很短的摘要，完整背景请查看文章末尾的来源链接。",
+        },
+        {
+            "speaker": 1,
+            "seconds": 9,
+            "text": "In simple terms, people, governments, or international groups may be affected by this change.",
+            "translationZh": "简单来说，这项变化可能影响普通民众、政府或国际组织。",
         },
         {
             "speaker": 0,
-            "seconds": 10,
-            "text": "You can revisit the full report through the source link shown with this lesson.",
+            "seconds": 8,
+            "text": "Listen for who is involved, what happened, and why it matters. Then check the source link below.",
+            "translationZh": "听的时候重点抓住三点：谁参与了、发生了什么、为什么重要。随后再通过来源链接核对事实。",
         },
     ]
 
@@ -262,11 +290,11 @@ def build_lesson(item: dict, alternatives: list[dict]) -> dict:
         "id": f"daily-{local_date.replace('-', '')}",
         "date": local_date,
         "code": "NEWS",
-        "section": "今日时政",
-        "title": f"Daily News: {headline}",
+        "section": "今日时政 · 入门",
+        "title": f"News in Simple English: {headline}",
         "subtitle": f"{item['source']} · {published_date} · 原创导听与理解题",
-        "description": "基于可信新闻源公开标题与摘要制作的原创六级听力练习，不转载原文全文。",
-        "level": "CET-6 · 新闻精听",
+        "description": "适合大二学生从 CET-4 向 CET-6 过渡的短句新闻精听，不转载原文全文。",
+        "level": "CET-4 → CET-6 · 入门新闻",
         "duration": f"{minutes:02d}:{seconds:02d}",
         "speakerNames": ["Anchor", "Analyst"],
         "source": {
@@ -275,6 +303,7 @@ def build_lesson(item: dict, alternatives: list[dict]) -> dict:
             "publishedAt": published_date,
             "headline": headline,
         },
+        "explanationZh": f"中文导读：这是一条来自 {item['source']} 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“{headline}”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
         "transcript": transcript,
         "questions": [
             {
