@@ -628,6 +628,28 @@ a {
   text-underline-offset: 3px;
 }
 
+.daily-explainer {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--paper-shadow);
+  border-bottom: 1px solid var(--paper-shadow);
+  background: var(--ochre-soft);
+}
+
+.daily-explainer h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.daily-explainer p {
+  max-width: 68ch;
+  margin: 6px 0 0;
+  color: var(--ink-secondary);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
 .audio-deck {
   display: grid;
   grid-template-columns: 52px minmax(150px, 1fr) auto auto;
@@ -1053,6 +1075,19 @@ a {
   font-size: 12px;
   line-height: 1.7;
   counter-increment: transcript;
+}
+
+.transcript-copy {
+  display: block;
+}
+
+.transcript-translation {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink-secondary);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 .transcript-lines li.is-current {
@@ -2776,6 +2811,10 @@ a {
             <h2 id="current-lesson-title">The Quiet Library Project</h2>
             <p class="lesson-subtitle" id="current-lesson-subtitle"></p>
             <p class="lesson-source" id="current-lesson-source" hidden></p>
+            <aside class="daily-explainer" id="daily-explainer" aria-labelledby="daily-explainer-title" hidden>
+              <h3 id="daily-explainer-title">中文导读</h3>
+              <p id="daily-explainer-copy"></p>
+            </aside>
 
             <div class="audio-deck">
               <button class="play-button" id="play-toggle" type="button" aria-label="播放听力">
@@ -3769,6 +3808,14 @@ window.CET6_STANDALONE = true;
       source.hidden = true;
       source.textContent = "";
     }
+    const explainer = $("#daily-explainer");
+    if (lesson.explanationZh) {
+      explainer.hidden = false;
+      $("#daily-explainer-copy").textContent = lesson.explanationZh;
+    } else {
+      explainer.hidden = true;
+      $("#daily-explainer-copy").textContent = "";
+    }
   }
 
   function renderWaveform() {
@@ -3820,7 +3867,10 @@ window.CET6_STANDALONE = true;
     $("#transcript-lines").innerHTML = lesson.transcript.map((line, index) => `
       <li class="${index === app.audio.segment ? "is-current" : ""}">
         <b>${escapeHtml(lesson.speakerNames[line.speaker])}</b>
-        <span>${escapeHtml(line.text)}</span>
+        <span class="transcript-copy">
+          ${escapeHtml(line.text)}
+          ${line.translationZh ? `<small class="transcript-translation">${escapeHtml(line.translationZh)}</small>` : ""}
+        </span>
       </li>
     `).join("");
   }
