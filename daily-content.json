@@ -1,43 +1,43 @@
 {
-  "id": "daily-20261104",
-  "date": "2026-11-04",
+  "id": "daily-20261105",
+  "date": "2026-11-05",
   "code": "NEWS",
   "section": "今日时政 · 入门",
-  "title": "News in Simple English: Action needed to tackle 'biodiversity crisis'",
-  "subtitle": "BBC Science & Environment · 2026-11-04 · 原创导听与理解题",
+  "title": "News in Simple English: Israel's president begins consultations with parties after election deadlock",
+  "subtitle": "BBC World · 2026-11-05 · 原创导听与理解题",
   "description": "适合大二学生从 CET-4 向 CET-6 过渡的短句新闻精听，不转载原文全文。",
   "level": "CET-4 → CET-6 · 入门新闻",
-  "duration": "00:32",
+  "duration": "00:34",
   "speakerNames": [
     "Anchor",
     "Analyst"
   ],
   "source": {
-    "name": "BBC Science & Environment",
-    "url": "https://www.bbc.co.uk/news/articles/c8wy94ewzw03o?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-11-04",
-    "headline": "Action needed to tackle 'biodiversity crisis'"
+    "name": "BBC World",
+    "url": "https://www.bbc.co.uk/news/articles/c6z98z5z91ppo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-11-05",
+    "headline": "Israel's president begins consultations with parties after election deadlock"
   },
-  "explanationZh": "中文导读：这是一条来自 BBC Science & Environment 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“Action needed to tackle 'biodiversity crisis'”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
+  "explanationZh": "中文导读：这是一条来自 BBC World 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“Israel's president begins consultations with parties after election deadlock”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
   "transcript": [
     {
       "speaker": 0,
       "seconds": 8,
-      "text": "Today, we look at a news story from BBC Science & Environment. It was published on 2026-11-04.",
-      "translationZh": "今天的新闻来自 BBC Science & Environment，发布时间是 2026-11-04。",
+      "text": "Today, we look at a news story from BBC World. It was published on 2026-11-05.",
+      "translationZh": "今天的新闻来自 BBC World，发布时间是 2026-11-05。",
       "audio": "daily-audio/0.mp3"
     },
     {
       "speaker": 1,
       "seconds": 9,
-      "text": "The main story is this: Action needed to tackle 'biodiversity crisis'.",
+      "text": "The main story is this: Israel's president begins consultations with parties after election deadlock.",
       "translationZh": "这条新闻正在报道一项新的国际动态。先抓住英文标题中的国家、机构和事件关键词。",
       "audio": "daily-audio/1.mp3"
     },
     {
       "speaker": 0,
       "seconds": 12,
-      "text": "The report says: \"The issue is part of wider concerns the government is not focused enough on the environment.\"",
+      "text": "The report says: \"Herzog warns politicians that \"not every commitment and promise can be fulfilled\" if they want to avoid another election.\"",
       "translationZh": "英文摘要介绍了新闻的核心事实；这里只引用很短的摘要，完整背景请查看文章末尾的来源链接。",
       "audio": "daily-audio/2.mp3"
     },
@@ -61,12 +61,12 @@
       "id": "daily-topic",
       "prompt": "What is the central news development discussed in the report?",
       "options": [
-        "Boulders dropped off coast to disrupt deep fishing",
-        "Action needed to tackle 'biodiversity crisis'",
-        "Major study into 'forever chemicals' in people's bodies launched in UK"
+        "Prince William says UK faces terrifying risk of more wildfires due to climate change",
+        "Everything you need to know from the US midterm elections",
+        "Israel's president begins consultations with parties after election deadlock"
       ],
-      "answer": 1,
-      "explanation": "节目开头明确介绍了这则新闻：Action needed to tackle 'biodiversity crisis'。",
+      "answer": 2,
+      "explanation": "节目开头明确介绍了这则新闻：Israel's president begins consultations with parties after election deadlock。",
       "skill": "新闻主旨"
     },
     {
@@ -75,17 +75,17 @@
       "options": [
         "BBC Science & Environment",
         "BBC World",
-        "The Guardian Environment"
+        "NPR World"
       ],
-      "answer": 0,
-      "explanation": "材料中的新闻来源标注为 BBC Science & Environment，发布日期为 2026-11-04。",
+      "answer": 1,
+      "explanation": "材料中的新闻来源标注为 BBC World，发布日期为 2026-11-05。",
       "skill": "来源辨认"
     }
   ],
   "vocabulary": [
-    "preliminary",
-    "adequate",
     "coherent",
-    "constraint"
+    "constraint",
+    "anticipate",
+    "incentive"
   ]
 }
