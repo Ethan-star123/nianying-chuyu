@@ -1,43 +1,43 @@
 {
-  "id": "daily-20261106",
-  "date": "2026-11-06",
+  "id": "daily-20261107",
+  "date": "2026-11-07",
   "code": "NEWS",
   "section": "今日时政 · 入门",
-  "title": "News in Simple English: BBC Inside Science",
-  "subtitle": "BBC Science & Environment · 2026-11-06 · 原创导听与理解题",
+  "title": "News in Simple English: Somalia's top court rejects president's term extension amid political crisis",
+  "subtitle": "BBC World · 2026-11-06 · 原创导听与理解题",
   "description": "适合大二学生从 CET-4 向 CET-6 过渡的短句新闻精听，不转载原文全文。",
   "level": "CET-4 → CET-6 · 入门新闻",
-  "duration": "00:28",
+  "duration": "00:34",
   "speakerNames": [
     "Anchor",
     "Analyst"
   ],
   "source": {
-    "name": "BBC Science & Environment",
-    "url": "https://www.bbc.co.uk/sounds/play/w3ct978k?at_medium=RSS&at_campaign=rss",
+    "name": "BBC World",
+    "url": "https://www.bbc.co.uk/news/articles/c977ppnezep6o?at_medium=RSS&at_campaign=rss",
     "publishedAt": "2026-11-06",
-    "headline": "BBC Inside Science"
+    "headline": "Somalia's top court rejects president's term extension amid political crisis"
   },
-  "explanationZh": "中文导读：这是一条来自 BBC Science & Environment 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“BBC Inside Science”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
+  "explanationZh": "中文导读：这是一条来自 BBC World 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“Somalia's top court rejects president's term extension amid political crisis”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
   "transcript": [
     {
       "speaker": 0,
       "seconds": 8,
-      "text": "Today, we look at a news story from BBC Science & Environment. It was published on 2026-11-06.",
-      "translationZh": "今天的新闻来自 BBC Science & Environment，发布时间是 2026-11-06。",
+      "text": "Today, we look at a news story from BBC World. It was published on 2026-11-06.",
+      "translationZh": "今天的新闻来自 BBC World，发布时间是 2026-11-06。",
       "audio": "daily-audio/0.mp3"
     },
     {
       "speaker": 1,
       "seconds": 9,
-      "text": "The main story is this: BBC Inside Science.",
+      "text": "The main story is this: Somalia's top court rejects president's term extension amid political crisis.",
       "translationZh": "这条新闻正在报道一项新的国际动态。先抓住英文标题中的国家、机构和事件关键词。",
       "audio": "daily-audio/1.mp3"
     },
     {
       "speaker": 0,
       "seconds": 12,
-      "text": "The report says: \"A glimpse into the world of the incredibly tiny.\"",
+      "text": "The report says: \"The country's first nationwide elections since 1969 are due next year - a timetable now thrown into doubt.\"",
       "translationZh": "英文摘要介绍了新闻的核心事实；这里只引用很短的摘要，完整背景请查看文章末尾的来源链接。",
       "audio": "daily-audio/2.mp3"
     },
@@ -61,31 +61,31 @@
       "id": "daily-topic",
       "prompt": "What is the central news development discussed in the report?",
       "options": [
-        "BBC Inside Science",
-        "Paraguay's president is impeached minutes after resigning following a bank collapse",
-        "Google refused 54K-name petition, say campaigners"
+        "Somalia's top court rejects president's term extension amid political crisis",
+        "Afghanistan faces deepening humanitarian crisis amid sweeping rights restrictions",
+        "Wales scraps controversial Uganda tree-planting scheme"
       ],
       "answer": 0,
-      "explanation": "节目开头明确介绍了这则新闻：BBC Inside Science。",
+      "explanation": "节目开头明确介绍了这则新闻：Somalia's top court rejects president's term extension amid political crisis。",
       "skill": "新闻主旨"
     },
     {
       "id": "daily-source",
       "prompt": "Which organization published the report discussed in the dialogue?",
       "options": [
-        "NPR World",
         "BBC Science & Environment",
+        "UN News",
         "BBC World"
       ],
-      "answer": 1,
-      "explanation": "材料中的新闻来源标注为 BBC Science & Environment，发布日期为 2026-11-06。",
+      "answer": 2,
+      "explanation": "材料中的新闻来源标注为 BBC World，发布日期为 2026-11-06。",
       "skill": "来源辨认"
     }
   ],
   "vocabulary": [
+    "consensus",
+    "preliminary",
     "adequate",
-    "coherent",
-    "constraint",
-    "anticipate"
+    "coherent"
   ]
 }
