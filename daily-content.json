@@ -1,43 +1,43 @@
 {
-  "id": "daily-20261108",
-  "date": "2026-11-08",
+  "id": "daily-20261109",
+  "date": "2026-11-09",
   "code": "NEWS",
   "section": "今日时政 · 入门",
-  "title": "News in Simple English: Israel's president taps opposition candidate, not Netanyahu, to form a government",
-  "subtitle": "NPR World · 2026-11-08 · 原创导听与理解题",
+  "title": "News in Simple English: Countryside managers prepare for climate change",
+  "subtitle": "BBC Science & Environment · 2026-11-08 · 原创导听与理解题",
   "description": "适合大二学生从 CET-4 向 CET-6 过渡的短句新闻精听，不转载原文全文。",
   "level": "CET-4 → CET-6 · 入门新闻",
-  "duration": "00:40",
+  "duration": "00:30",
   "speakerNames": [
     "Anchor",
     "Analyst"
   ],
   "source": {
-    "name": "NPR World",
-    "url": "https://www.npr.org/2026/11/07/g-s1-152536/netanyahu-israel-government-eisenkot-herzog",
+    "name": "BBC Science & Environment",
+    "url": "https://www.bbc.co.uk/news/articles/c3ewe99dzdlpo?at_medium=RSS&at_campaign=rss",
     "publishedAt": "2026-11-08",
-    "headline": "Israel's president taps opposition candidate, not Netanyahu, to form a government"
+    "headline": "Countryside managers prepare for climate change"
   },
-  "explanationZh": "中文导读：这是一条来自 NPR World 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“Israel's president taps opposition candidate, not Netanyahu, to form a government”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
+  "explanationZh": "中文导读：这是一条来自 BBC Science & Environment 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“Countryside managers prepare for climate change”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
   "transcript": [
     {
       "speaker": 0,
       "seconds": 8,
-      "text": "Today, we look at a news story from NPR World. It was published on 2026-11-08.",
-      "translationZh": "今天的新闻来自 NPR World，发布时间是 2026-11-08。",
+      "text": "Today, we look at a news story from BBC Science & Environment. It was published on 2026-11-08.",
+      "translationZh": "今天的新闻来自 BBC Science & Environment，发布时间是 2026-11-08。",
       "audio": "daily-audio/0.mp3"
     },
     {
       "speaker": 1,
       "seconds": 9,
-      "text": "The main story is this: Israel's president taps opposition candidate, not Netanyahu, to form a government.",
+      "text": "The main story is this: Countryside managers prepare for climate change.",
       "translationZh": "这条新闻正在报道一项新的国际动态。先抓住英文标题中的国家、机构和事件关键词。",
       "audio": "daily-audio/1.mp3"
     },
     {
       "speaker": 0,
       "seconds": 12,
-      "text": "The report says: \"Gadi Eisenkot ran as the main rival to Prime Minister Benjamin Netanyahu, but neither won enough support to command a majority. Israel's main parties have recommended Eisenkot form a new.\"",
+      "text": "The report says: \"North Pennines National Landscape's plan includes restoring peatland and wildfire preparedness.\"",
       "translationZh": "英文摘要介绍了新闻的核心事实；这里只引用很短的摘要，完整背景请查看文章末尾的来源链接。",
       "audio": "daily-audio/2.mp3"
     },
@@ -61,31 +61,31 @@
       "id": "daily-topic",
       "prompt": "What is the central news development discussed in the report?",
       "options": [
-        "Afghanistan faces deepening humanitarian crisis amid sweeping rights restrictions",
-        "Paraguay's former president charged after bank collapse",
-        "Israel's president taps opposition candidate, not Netanyahu, to form a government"
+        "Countryside managers prepare for climate change",
+        "No clear winner in New Zealand election, as leaders prepare for weeks of talks",
+        "Dormice 'thrive' at National Trust site"
       ],
-      "answer": 2,
-      "explanation": "节目开头明确介绍了这则新闻：Israel's president taps opposition candidate, not Netanyahu, to form a government。",
+      "answer": 0,
+      "explanation": "节目开头明确介绍了这则新闻：Countryside managers prepare for climate change。",
       "skill": "新闻主旨"
     },
     {
       "id": "daily-source",
       "prompt": "Which organization published the report discussed in the dialogue?",
       "options": [
-        "UN News",
-        "BBC World",
-        "NPR World"
+        "BBC Science & Environment",
+        "NPR World",
+        "BBC World"
       ],
-      "answer": 2,
-      "explanation": "材料中的新闻来源标注为 NPR World，发布日期为 2026-11-08。",
+      "answer": 0,
+      "explanation": "材料中的新闻来源标注为 BBC Science & Environment，发布日期为 2026-11-08。",
       "skill": "来源辨认"
     }
   ],
   "vocabulary": [
-    "vulnerability",
-    "mitigate",
-    "resilient",
-    "consensus"
+    "adequate",
+    "coherent",
+    "constraint",
+    "anticipate"
   ]
 }
