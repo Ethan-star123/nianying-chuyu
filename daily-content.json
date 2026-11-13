@@ -1,43 +1,43 @@
 {
-  "id": "daily-20261113",
-  "date": "2026-11-13",
+  "id": "daily-20261114",
+  "date": "2026-11-14",
   "code": "NEWS",
   "section": "今日时政 · 入门",
-  "title": "News in Simple English: Cop31: how far off target are we? - video",
-  "subtitle": "The Guardian Environment · 2026-11-12 · 原创导听与理解题",
+  "title": "News in Simple English: Climate action discussed at youth COP meeting",
+  "subtitle": "BBC Science & Environment · 2026-11-13 · 原创导听与理解题",
   "description": "适合大二学生从 CET-4 向 CET-6 过渡的短句新闻精听，不转载原文全文。",
   "level": "CET-4 → CET-6 · 入门新闻",
-  "duration": "00:39",
+  "duration": "00:32",
   "speakerNames": [
     "Anchor",
     "Analyst"
   ],
   "source": {
-    "name": "The Guardian Environment",
-    "url": "https://www.theguardian.com/science/video/2026/nov/12/cop31-how-far-off-target-are-we-video",
-    "publishedAt": "2026-11-12",
-    "headline": "Cop31: how far off target are we? - video"
+    "name": "BBC Science & Environment",
+    "url": "https://www.bbc.co.uk/news/articles/ckx28ly7y387o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-11-13",
+    "headline": "Climate action discussed at youth COP meeting"
   },
-  "explanationZh": "中文导读：这是一条来自 The Guardian Environment 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“Cop31: how far off target are we? - video”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
+  "explanationZh": "中文导读：这是一条来自 BBC Science & Environment 的近期新闻，适合大二英语学习者入门练习。新闻标题提到“Climate action discussed at youth COP meeting”。这一节先用较短的英文说明发生了什么，再补充中文解释。建议先不看中文听一遍，抓住人物、地点、事件和影响；第二遍再对照原文和中文理解细节。",
   "transcript": [
     {
       "speaker": 0,
       "seconds": 8,
-      "text": "Today, we look at a news story from The Guardian Environment. It was published on 2026-11-12.",
-      "translationZh": "今天的新闻来自 The Guardian Environment，发布时间是 2026-11-12。",
+      "text": "Today, we look at a news story from BBC Science & Environment. It was published on 2026-11-13.",
+      "translationZh": "今天的新闻来自 BBC Science & Environment，发布时间是 2026-11-13。",
       "audio": "daily-audio/0.mp3"
     },
     {
       "speaker": 1,
       "seconds": 9,
-      "text": "The main story is this: Cop31: how far off target are we? - video.",
+      "text": "The main story is this: Climate action discussed at youth COP meeting.",
       "translationZh": "这条新闻正在报道一项新的国际动态。先抓住英文标题中的国家、机构和事件关键词。",
       "audio": "daily-audio/1.mp3"
     },
     {
       "speaker": 0,
       "seconds": 12,
-      "text": "The report says: \"As the planet faces unprecedented human-caused global heating, heads of government are meeting in Turkey for the next fortnight for the latest round of climate talks. Madeleine Finlay tells co-host.\"",
+      "text": "The report says: \"School children gather to discuss climate issues to coincide with the COP31 conference in Turkey.\"",
       "translationZh": "英文摘要介绍了新闻的核心事实；这里只引用很短的摘要，完整背景请查看文章末尾的来源链接。",
       "audio": "daily-audio/2.mp3"
     },
@@ -61,31 +61,31 @@
       "id": "daily-topic",
       "prompt": "What is the central news development discussed in the report?",
       "options": [
-        "BBC Inside Science",
+        "Climate action discussed at youth COP meeting",
         "Indonesia's VP resigns as his eligibility and academic credentials are questioned",
-        "Cop31: how far off target are we? - video"
+        "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine"
       ],
-      "answer": 2,
-      "explanation": "节目开头明确介绍了这则新闻：Cop31: how far off target are we? - video。",
+      "answer": 0,
+      "explanation": "节目开头明确介绍了这则新闻：Climate action discussed at youth COP meeting。",
       "skill": "新闻主旨"
     },
     {
       "id": "daily-source",
       "prompt": "Which organization published the report discussed in the dialogue?",
       "options": [
-        "The Guardian Environment",
         "NPR World",
-        "BBC Science & Environment"
+        "BBC Science & Environment",
+        "BBC World"
       ],
-      "answer": 0,
-      "explanation": "材料中的新闻来源标注为 The Guardian Environment，发布日期为 2026-11-12。",
+      "answer": 1,
+      "explanation": "材料中的新闻来源标注为 BBC Science & Environment，发布日期为 2026-11-13。",
       "skill": "来源辨认"
     }
   ],
   "vocabulary": [
-    "coherent",
-    "constraint",
     "anticipate",
-    "incentive"
+    "incentive",
+    "vulnerability",
+    "mitigate"
   ]
 }
